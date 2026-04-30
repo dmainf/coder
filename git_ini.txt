@@ -1,0 +1,53 @@
+git init			ローカルレポジトリを作成
+git remote add origin <URL>	ローカルとリモートを紐づけ
+	※リモートレポジトリは通常originとニックネームを付ける
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+git add	<file1 file2 .../-A>	ステージングする	(=commitの予約)
+git commit -m "<comment>"	コミットする		(=変更の記録を取る)
+git push origin main		プッシュする
+	git push --force origin main	mainブランチに強制的にpush(デフォルトbranchを確認して)
+
+
+
+git pull origin main		最新の状態を取得	
+git rm <file>			ファイルを削除	
+
+
+git status			作業中のブランチを表示
+	Untracked files：addされたことがない未知のファイル
+	Changes not staged for commit：過去にcommitされそこから変更・削除があるがaddされていない
+	Changes to be committed：既にaddされているがcommitされてない
+git remote -v			接続されているリモートレポジトリを表示
+git branch -a			ローカルとリモートのブランチを表示
+	git branch -m <name>		ブランチ名をnameに変える
+	※古いとmasterになってることがあるからmainにしとく
+
+
+
+
+free -h		メモリ使用量を確認
+
+
+
+tmux ls				起動しているセッションを表示する
+tmux				新規のセッションを開始する		tmux new -s <session>	<session>を開始する
+tmux a				最新のセッションにアタッチ		tmux a -t <session>	<session>にアタッチする
+								tmux kill-session -t <session>	<session>を終了させる
+
+* Ctrl + b
+d		デタッチ
+
+x		ペインを修了
+%		水平方向にペインを分割
+"		垂直方向にペインを分割
+->, <-		ペイン間を移動
+
+
+
+
+
+
+f		カーソル合わせる
+j/k		ちょっとスクロール
+d/u		でかくスクロール
